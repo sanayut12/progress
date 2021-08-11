@@ -23,13 +23,13 @@ class _ProgressBarState extends State<ProgressBar> {
               children: [
                 Expanded(
                     child: Container(
-                  height: 7,
+                  height: 3,
                   width: double.infinity,
                   color: Colors.blue,
                 )),
                 Expanded(
                     child: Container(
-                  height: 7,
+                  height: 3,
                   width: double.infinity,
                   color: Colors.amber,
                 ))
@@ -44,49 +44,31 @@ class _ProgressBarState extends State<ProgressBar> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  height: 25,
-                  width: 25,
+                  height: 15,
+                  width: 15,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                      border: Border.all(color: Colors.red, width: 3),
+                      border: Border.all(color: Colors.red, width: 1.5),
                       color: Colors.white,
                       shape: BoxShape.circle),
-                  child: Container(
-                    height: 14,
-                    width: 14,
-                    decoration: BoxDecoration(
-                        color: Colors.red, shape: BoxShape.circle),
-                  ),
                 ),
                 Container(
-                  height: 25,
-                  width: 25,
+                  height: 15,
+                  width: 15,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                      border: Border.all(color: Colors.red, width: 3),
+                      border: Border.all(color: Colors.red, width: 1.5),
                       color: Colors.white,
                       shape: BoxShape.circle),
-                  child: Container(
-                    height: 14,
-                    width: 14,
-                    decoration: BoxDecoration(
-                        color: Colors.red, shape: BoxShape.circle),
-                  ),
                 ),
                 Container(
-                  height: 25,
-                  width: 25,
+                  height: 15,
+                  width: 15,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                      border: Border.all(color: Colors.red, width: 3),
+                      border: Border.all(color: Colors.red, width: 1.5),
                       color: Colors.white,
                       shape: BoxShape.circle),
-                  child: Container(
-                    height: 20,
-                    width: 20,
-                    decoration: BoxDecoration(
-                        color: Colors.red, shape: BoxShape.circle),
-                  ),
                 ),
               ],
             ),

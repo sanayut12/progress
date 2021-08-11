@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:progressbar/progress.dart';
+import 'package:progressbar/progress5H.dart';
+import 'package:progressbar/progress5W.dart';
+import 'package:progressbar/text.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,13 +26,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home:  MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+  MyHomePage({@required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -57,6 +60,9 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter++;
+      if (_counter > 4){
+        _counter = 0;
+      }
     });
   }
 
@@ -74,6 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
+      
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
@@ -94,10 +101,9 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            ProgressBar(),
-            Text(
-              'You have pushed the button this many times:',
-            ),
+            Progress5W(progressStep: _counter,),
+            Expanded(child: Progress5H(progressStep: _counter),),
+            // TextComponent(index: _counter),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
@@ -110,6 +116,21 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class Maindddd extends StatefulWidget {
+
+  @override
+  _MainddddState createState() => _MainddddState();
+}
+
+class _MainddddState extends State<Maindddd> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(height: double.infinity,width: double.infinity,decoration: BoxDecoration(image: DecorationImage(fit: BoxFit.fill,image: AssetImage("assets/image.png"))),),
     );
   }
 }
